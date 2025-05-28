@@ -66,6 +66,11 @@ Seriously?
 6. drag and drop your `.ahk` file onto this new ahk2exe window...  
   
 7. click on the "base file" dropdown and select any version that goes something like v2.x.x...  
+
+![ss one](https://github.com/user-attachments/assets/32f0fb19-05b9-4202-ac73-ad6a712e4295)
+
+![ss two](https://github.com/user-attachments/assets/2c9bf244-4760-49b7-9219-b92559d932cb)
+
   
 8. click convert...  
   
