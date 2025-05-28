@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>debounclic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown-dark.min.css">
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      padding: 2rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    .markdown-body {
+      max-width: 800px;
+      margin: auto;
+    }
+    pre code {
+      background-color: #161b22;
+      padding: 0.5em;
+      display: block;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <article class="markdown-body">
+    <h1>📄 debounclic</h1>
+    <p>by <a href="https://github.com/milichf">mschief(milichf)</a></p>
+<p>this is a smol-badly written-autohotkey script.... which simulates double clicks.....</p>
+<hr />
+<h2>What?</h2>
+<p>Your mouse button and it's inners work like such:<br />
+The plastic button and it's inner's metal contacts touch to create a click... but they don't do it cleanly.<br />
+And so, the contacts "bounce", registering multiple or double the clicks you performed, incorrectly.<br />
+Modern mice handle this by adding a "debounce time", which is a minimum delay between registering clicks. Since doubleclicks happen REALLY fast, usually under 5-20ms, mice have the debounce time set to 30ms and above, so that any incorrect clicks this time do not occur. We can lower this time in your mouse's software to a lower number to get an.. unfair(?) advantage in video games...  </p>
+<p>However, some mouse software do not have an option to turn down the debounce time.<br />
+We use AHK's <code>Random</code> function to <strong>simulate human variation</strong> and avoid robotic patterns.</p>
+<hr />
+<h2>And?</h2>
+<blockquote>
+<p>However, some mouse software do not have an option to turn down the debounce time.<br />
+And as such I poorly hacked together this autohotkey script for people who cheat in video games... to make artificial double clicks.</p>
+</blockquote>
+<p>Seriously?</p>
+<h2>The Script</h2>
+<h3>🔹 Left Mouse Button (LMB) Double-Click</h3>
+<div class="codehilite"><pre><span></span><code><span class="o">~</span><span class="n">LButton</span><span class="o">::</span>
+<span class="p">{</span>
+    <span class="nb">Click</span>
+    <span class="n">delay</span> <span class="o">:=</span> <span class="n">Random</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="nb">Sleep</span> <span class="n">delay</span>
+    <span class="nb">Click</span>
+<span class="p">}</span>
+<span class="se">````</span>
+
+<span class="n">###</span> <span class="err">🔹</span> <span class="n">Right</span> <span class="n">Mouse</span> <span class="n">Button</span> <span class="p">(</span><span class="n">RMB</span><span class="p">)</span> <span class="n">Double</span><span class="o">-</span><span class="n">Click</span>
+
+<span class="se">```a</span><span class="n">hk</span>
+<span class="o">~</span><span class="n">RButton</span><span class="o">::</span>
+<span class="p">{</span>
+    <span class="nb">Click</span> <span class="s">&quot;Right&quot;</span>
+    <span class="n">delay</span> <span class="o">:=</span> <span class="n">Random</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="nb">Sleep</span> <span class="n">delay</span>
+    <span class="nb">Click</span> <span class="s">&quot;Right&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h2>how to use it...</h2>
+<ol>
+<li>
+<p>Create a... <code>.ahk</code> file...  </p>
+</li>
+<li>
+<p>paste the above rmb or lmb scripts into it...  </p>
+</li>
+<li>
+<p>save it.. onto your desktop maybe..  </p>
+</li>
+<li>
+<p>Press the windows key...  </p>
+</li>
+<li>
+<p>type and start.. <code>ahk2exe</code>  </p>
+</li>
+<li>
+<p>drag and drop your <code>.ahk</code> file onto this new ahk2exe window...  </p>
+</li>
+<li>
+<p>click on the "base file" dropdown and select any version that goes something like v2.x.x...  </p>
+</li>
+</ol>
+<p><img alt="ss one" src="https://github.com/user-attachments/assets/32f0fb19-05b9-4202-ac73-ad6a712e4295" /></p>
+<p><img alt="ss two" src="https://github.com/user-attachments/assets/2c9bf244-4760-49b7-9219-b92559d932cb" /></p>
+<ol>
+<li>
+<p>click convert...  </p>
+</li>
+<li>
+<p>now you should have a .exe on your desktop.. or wherever you put the <code>.ahk</code> script.  </p>
+</li>
+</ol>
+<hr />
+<h2>a note</h2>
+<ul>
+<li>you can paste <strong>both scripts in one file</strong> with a blank line in between just to be safe... if you want both LMB and RMB double-clicking, at once...  </li>
+<li>
+<p>adjust the <code>delay</code> range if:</p>
+</li>
+<li>
+<p>clicks aren't being registered: try <code>20–40</code> ms</p>
+</li>
+<li>too slow: tighten to <code>5–15</code> ms (it probably won't work this low but i havent tested idk)..  </li>
+</ul>
+<hr />
+<h2>contribute?</h2>
+<p>idk, i would maybe see your pr.. but i don't think theres anything more we can do with this...  </p>
+<hr />
+<h2>why..?</h2>
+<p>maybe you suck at stuff and want to double click to win in a game while others get their elo down...</p>
+<hr />
+<h1>🖱️</h1>
+  </article>
+</body>
+</html>

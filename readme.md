@@ -4,6 +4,11 @@ this is a smol-badly written-autohotkey script.... which simulates double clicks
 
 ---
 
+it also has a.. web thingy; which is no different to what you see right no. its useless.  
+[here if ur curious](https://milichf.github.io/debounclic/)
+
+---
+
 ## What?
 
 Your mouse button and it's inners work like such:  
@@ -11,8 +16,7 @@ The plastic button and it's inner's metal contacts touch to create a click... bu
 And so, the contacts "bounce", registering multiple or double the clicks you performed, incorrectly.  
 Modern mice handle this by adding a "debounce time", which is a minimum delay between registering clicks. Since doubleclicks happen REALLY fast, usually under 5-20ms, mice have the debounce time set to 30ms and above, so that any incorrect clicks this time do not occur. We can lower this time in your mouse's software to a lower number to get an.. unfair(?) advantage in video games...  
   
-However, some mouse software do not have an option to turn down the debounce time.  
-We use AHK's `Random` function to **simulate human variation** and avoid robotic patterns.
+However, some mouse software do not have an option to turn down the debounce time.
 
 ---
 
