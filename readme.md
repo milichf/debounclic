@@ -9,7 +9,7 @@ it also has a.. web thingy; which is no different to what you see right no. its 
 
 ---
 
-## What?
+## what?
 
 Your mouse button and it's inners work like such:  
 The plastic button and it's inner's metal contacts touch to create a click... but they don't do it cleanly.  
@@ -20,16 +20,16 @@ However, some mouse software do not have an option to turn down the debounce tim
 
 ---
 
-## And?
+## and?
 
 > However, some mouse software do not have an option to turn down the debounce time.  
 And as such I poorly hacked together this autohotkey script for people who cheat in video games... to make artificial double clicks.
 
 Seriously?
 
-## The Script
+## script
 
-### 🔹 Left Mouse Button (LMB) Double-Click
+### 🔹 lmb
 
 ```ahk
 ~LButton::
@@ -41,7 +41,7 @@ Seriously?
 }
 ````
 
-### 🔹 Right Mouse Button (RMB) Double-Click
+### 🔹 rmb
 
 ```ahk
 ~RButton::
