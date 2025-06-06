@@ -34,7 +34,6 @@ Seriously?
 ```ahk
 ~LButton::
 {
-    Click
     delay := Random(10, 20)
     Sleep delay
     Click
@@ -46,7 +45,6 @@ Seriously?
 ```ahk
 ~RButton::
 {
-    Click "Right"
     delay := Random(10, 20)
     Sleep delay
     Click "Right"
